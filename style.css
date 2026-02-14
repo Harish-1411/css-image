@@ -1,0 +1,61 @@
+/* General Reset */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f8f9fa;
+    font-family: 'Brush Script MT', cursive, sans-serif; /* Mimics the script font */
+}
+
+/* Pink Gallery Box */
+.gallery-container {
+    background-color: gray; /* Light pink background */
+    padding: 40px;
+    border: 2px solid #7fb3d5; /* Light blue border from your screenshot */
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+.gallery-title {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.divider {
+    width: 100px;
+    height: 1px;
+    background-color: #7fb3d5;
+    margin: 0 auto 30px auto;
+}
+
+/* Grid Layout */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 15px;
+    justify-items: center;
+}
+
+/* Image Styling */
+.image-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Keeps images square */
+    object-fit: cover;
+    border: 3px solid #ccc; /* Subtle border around images */
+    background-color: white;
+}
+
+/* Centering the last row (since there are only 9 images) */
+.image-grid img:nth-last-child(2) {
+    grid-column: span 1;
+    margin-left: 0%; /* Pushes the 7th image to the right */
+}
+
+.image-grid img:last-child {
+    grid-column: span 1;
+    margin-left: 0%; /* Aligns the 8th image with the grid flow */
+}
